@@ -1,0 +1,47 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.navbar {
+    background-color: #343a40;
+    .navbar-brand {
+        color: #ffffff;
+        &:hover {
+            color: #f8f9fa;
+        }
+    }
+    .nav-link {
+        color: #ffffff;
+        &:hover {
+            color: #f8f9fa;
+        }
+    }
+}
+
+.card {
+    margin: 15px;
+    border: none;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.movie-detail {
+    margin: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.favorites {
+    margin: 20px;
+}

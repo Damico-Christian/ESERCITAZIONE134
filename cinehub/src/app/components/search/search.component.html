@@ -1,0 +1,17 @@
+<form class="search-form">
+  <input type="text" placeholder="Cerca un film..." class="search-input" [(ngModel)]="searchQuery" (input)="onSearch()" />
+  <button type="submit" class="search-button" (click)="onSearch()">Cerca</button>
+</form>
+
+<div *ngIf="searchResults.length > 0" class="search-results">
+  <h2>Risultati della ricerca:</h2>
+  <ul>
+    <li *ngFor="let movie of searchResults">
+      <a [routerLink]="['/movie', movie.id]">{{ movie.title }}</a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="searchResults.length === 0 && searchQuery">
+  <p>Nessun film trovato per "{{ searchQuery }}".</p>
+</div>

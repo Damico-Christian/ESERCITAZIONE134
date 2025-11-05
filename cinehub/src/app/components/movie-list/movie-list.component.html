@@ -1,0 +1,9 @@
+<div class="movie-list">
+  <h2>Lista dei Film</h2>
+  <div class="movie-card" *ngFor="let movie of movies">
+    <img [src]="movie.poster" alt="{{ movie.title }} Poster" />
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.genre }} | {{ movie.year }}</p>
+    <button (click)="viewDetails(movie.id)">Dettagli</button>
+  </div>
+</div>
